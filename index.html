@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eva's Portfolio</title>
+  <title>Eva M. Aguado Castro Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header Section -->
-  <header class="header">
+  <header>
+    <img src="Images/logo.png" alt="Eva's Logo" class="header-logo">
     <nav class="nav">
-      <div class="logo">
-        <img src="images/logo-placeholder.png" alt="Logo">
-      </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -28,8 +24,12 @@
     <p>Product Manager Driving Innovation & Impact</p>
     <p>Experienced in B2B SaaS, HR Tech, Fintech, and Integrations</p>
     <div class="cta-buttons">
-      <a href="#portfolio" class="btn-primary">View Portfolio</a>
-      <a href="#contact" class="btn-secondary">Contact Me</a>
+      <a href="#portfolio" class="btn-primary">
+        <img src="Images/portfolio-button.png" alt="View Portfolio">
+      </a>
+      <a href="#contact" class="btn-secondary">
+        <img src="Images/contact-button.png" alt="Contact Me">
+      </a>
     </div>
   </section>
 
@@ -38,23 +38,56 @@
     <h2>Highlights</h2>
     <div class="highlight-cards">
       <div class="card">
+        <img src="Images/highlight-icon-mixpanel-funnel.png" alt="Highlight Icon 1">
         <h3>Reduced Bounce Rate</h3>
-        <p>Reduced bounce rate by <span class="highlight">10%</span> and increased organic traffic by <span class="highlight">300%</span>.</p>
+        <p>Reduced bounce rate by <span>10%</span> and increased organic traffic by <span>300%</span>.</p>
       </div>
       <div class="card">
+        <img src="Images/highlight-icon-Jira.png" alt="Highlight Icon 2">
         <h3>Customer Retention</h3>
-        <p>Improved customer retention by <span class="highlight">10%</span> through iterative feedback loops.</p>
+        <p>Improved customer retention by <span>10%</span> through iterative feedback loops.</p>
       </div>
       <div class="card">
+        <img src="Images/highlight-icon-looker.png" alt="Highlight Icon 3">
         <h3>Feature Adoption</h3>
-        <p>Enhanced feature adoption by <span class="highlight">20%</span>.</p>
+        <p>Enhanced feature adoption by <span>20%</span>.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- Featured Projects Section -->
+  <section class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-cards">
+      <div class="card">
+        <img src="Images/OneclickRFP.png" alt="OneClick RFP Logo">
+        <h3>OneClick RFP</h3>
+        <p>Redesigned a B2B SaaS platform, increasing traffic by 1000% and reducing onboarding friction.</p>
+      </div>
+      <div class="card">
+        <img src="Images/Logo_PlandayXero.png" alt="Planday Logo">
+        <h3>Planday Workforce</h3>
+        <p>Developed scheduling solutions, reducing manual effort by 15+ hours per week.</p>
+      </div>
+      <div class="card">
+        <img src="Images/santa_fe_relocation_logo.png" alt="Santa Fe Logo">
+        <h3>Santa Fe Relocation</h3>
+        <p>Streamlined global logistics, managing 100+ relocations per month.</p>
+      </div>
+      <div class="card">
+        <img src="Images/TVC logo.jpg" alt="TVC Logo">
+        <h3>Environmental Volunteering</h3>
+        <p>Supported biodiversity efforts by managing conservation projects in Richmond.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
     <p>© 2024 Eva M. Aguado Castro</p>
+    <a href="https://linkedin.com" target="_blank">
+      <img src="Images/LinkedIn Logo.png" alt="LinkedIn Logo">
+    </a>
   </footer>
 </body>
 </html>
