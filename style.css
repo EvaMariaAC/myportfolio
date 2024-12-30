@@ -52,8 +52,8 @@
     text-align: center;
     padding: 6rem 2rem;
     color: #333;
-    background: linear-gradient(180deg, #89AEEA 0%, #199BD7 100%);
-  }
+    background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
+}
   
   .hero img {
     display: inline-block;
@@ -80,7 +80,7 @@
   
   /* Highlights Section */
   .highlights {
-    background: linear-gradient(180deg, #199BD7 0%, #147CAC 100%);
+    background: linear-gradient(180deg, #199BD7 50%, #147CAC 100%);
     padding: 3rem 2rem;
     color: white;
     text-align: center;
@@ -132,45 +132,46 @@
   
   /* Featured Projects Section */
   .featured-projects {
-    padding: 4rem 2rem;
-    background: linear-gradient(180deg, #147CAC 0%, #89AEEA 100%);
-  }
-  
-  .projects {
-    display: flex; /* Make children align in a row */
-    justify-content: center; /* Center-align all cards */
-    gap: 20px; /* Add space between the cards */
-    flex-wrap: wrap; /* Allow wrapping to handle smaller screens */
-    padding: 2rem 0; /* Add vertical padding */
-  }
-  
+    padding: 4rem;
+    background: linear-gradient(180deg, #147CAC 50%, #89AEEA 100%);
+}
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-template-rows: auto auto; /* Two rows: One for three cards, one for the last card */
+    gap: 2rem; /* Spacing between cards */
+    justify-items: center; /* Centers items horizontally */
+    margin-top: 2rem;
+  }  
   .project-card {
-    width: 280px; /* Fixed width for cards */
     background: white;
+    padding: 1rem;
     border-radius: 8px;
-    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
     text-align: center;
-    border: 1px solid #D9D9D9;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 10px; /* Ensure consistent spacing */
   }
   
   .project-card img {
-    width: 100px;
+    max-width: 100px;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
   
   .project-card h3 {
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
   }
   
   .project-card p {
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #757575;
-    line-height: 1.5;
+  }
+  
+  /* Center the single card on its row */
+  .projects-grid > :nth-child(4) {
+    grid-column: 2; /* Centers the last card in the middle column */
   }
   
   /* Footer Section */
