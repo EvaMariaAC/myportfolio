@@ -54,7 +54,7 @@ header {
     display: inline-block;
     margin: 1rem 0.5rem;
     width: 150px;
-
+  }
   .hero h1 {
     font-size: 3rem; /* Keep existing size */
     font-weight: 700;
