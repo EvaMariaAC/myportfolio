@@ -191,28 +191,35 @@ footer img {
   margin-top: 4rem;
 }
 
-.project {
-  display: inline-block;
-  width: 250px;
-  margin: 20px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #D9D9D9;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 20px; /* Adjust spacing between cards */
+    margin-top: 20px;
+  }
 
-.project img {
-  width: 100px;
-  margin: 20px auto;
-  display: block;
-}
-
-.project h3 {
-  font-size: 20px;
-  font-weight: 600;
-}
-
+.project-card {
+    width: 280px; /* Adjust card size as per design */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .project-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  .project-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
 .project p {
   font-size: 14px;
   color: #757575;
