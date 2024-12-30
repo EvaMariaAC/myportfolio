@@ -52,6 +52,7 @@
     text-align: center;
     padding: 6rem 2rem;
     color: #333;
+    background: linear-gradient(180deg, #89AEEA 0%, #199BD7 100%);
   }
   
   .hero img {
@@ -79,7 +80,7 @@
   
   /* Highlights Section */
   .highlights {
-    background: #147CAC;
+    background: linear-gradient(180deg, #199BD7 0%, #147CAC 100%);
     padding: 3rem 2rem;
     color: white;
     text-align: center;
@@ -131,26 +132,27 @@
   
   /* Featured Projects Section */
   .featured-projects {
-    margin-top: 4rem;
-    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #147CAC 0%, #89AEEA 100%);
   }
   
   .projects {
-    display: flex;
-    justify-content: center; /* Center align projects */
-    gap: 20px; /* Add spacing between project cards */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    padding: 2rem 0; /* Add vertical spacing */
+    display: flex; /* Make children align in a row */
+    justify-content: center; /* Center-align all cards */
+    gap: 20px; /* Add space between the cards */
+    flex-wrap: wrap; /* Allow wrapping to handle smaller screens */
+    padding: 2rem 0; /* Add vertical padding */
   }
   
   .project-card {
-    width: 280px; /* Match design size */
+    width: 280px; /* Fixed width for cards */
     background: white;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     border: 1px solid #D9D9D9;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Ensure consistent spacing */
   }
   
   .project-card img {
