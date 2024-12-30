@@ -1,54 +1,53 @@
 /* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
-  line-height: 1.6;
-}
-
-/* Header Section */
-header {
-  background: #89AEEA;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-    display: inline-block;
-    margin-right: 20px; /* Spacing between logo and navigation links */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-
-.nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 1rem;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
+    line-height: 1.6;
+  }
+  
+  /* Header Section */
+  header {
+    background: #89AEEA;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1rem;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
     text-align: center;
-    padding: 6rem 2rem; /* Adjust padding to match Figma */
+    padding: 6rem 2rem;
     color: #333;
   }
   
@@ -57,53 +56,51 @@ header {
     margin: 1rem 0.5rem;
     width: 150px;
   }
+  
   .hero h1 {
-    font-size: 3rem; /* Keep existing size */
+    font-size: 3rem;
     font-weight: 700;
   }
   
   .hero p {
     margin: 1rem 0;
-    font-size: 1.2rem; /* Matches readability */
+    font-size: 1.2rem;
   }
   
-  
-  /* CTA Buttons (from new CSS) */
   .cta-buttons {
     margin-top: 2rem;
   }
   
-  .cta-buttons .btn-primary {
-    background-color: #EEA575;
-    color: black;
+  .cta-buttons a {
+    text-decoration: none;
     font-size: 24px;
     font-weight: 400;
     padding: 15px 30px;
     border-radius: 42px;
-    text-decoration: none;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
   
-  .cta-buttons .btn-primary:hover {
+  .btn-primary {
+    background-color: #EEA575;
+    color: black;
+  }
+  
+  .btn-primary:hover {
     background: #f5b08a;
   }
   
-  .cta-buttons .btn-secondary {
+  .btn-secondary {
     background-color: #F7F7F7;
     border: 2px solid #89AEEA;
     color: black;
-    font-size: 24px;
-    font-weight: 400;
-    padding: 15px 30px;
-    border-radius: 42px;
   }
   
-  .cta-buttons .btn-secondary:hover {
+  .btn-secondary:hover {
     background: #d9e9fc;
   }
   
-/* Highlights Section */
-.highlights {
+  /* Highlights Section */
+  .highlights {
     background: #147CAC;
     padding: 3rem 2rem;
     color: white;
@@ -121,11 +118,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
   }
-  .card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1rem;
-  }
+  
   .card {
     background: #f7f7f7;
     color: #333;
@@ -134,6 +127,12 @@ header {
     padding: 1.5rem;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
   }
   
   .card h3 {
@@ -146,27 +145,53 @@ header {
     font-size: 1rem;
     color: #333;
   }
-
-.card span {
-  font-weight: bold;
-  color: #1C50EA;
-}
-
-/* Footer Section */
-footer {
-  background: #D9D9D9;
-  color: #333;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-footer img {
-    width: 30px;
-    height: auto;
-    margin-top: 0.5rem;
+  
+  .card span {
+    font-weight: bold;
+    color: #1C50EA;
   }
-
+  
+  /* Featured Projects Section */
+  .featured-projects {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .project-card {
+    width: 250px;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .project-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .project-card p {
+    font-size: 14px;
+    color: #757575;
+  }
+  
+  /* Footer Section */
   footer {
     display: flex;
     justify-content: space-between;
@@ -178,7 +203,7 @@ footer img {
   .footer-buttons {
     display: flex;
     justify-content: space-between;
-    width: 100%; /* Ensures buttons span the full footer */
+    width: 100%;
   }
   
   .footer-button {
@@ -196,93 +221,33 @@ footer img {
   }
   
   .linkedin {
-    background: #0077B5; /* LinkedIn blue */
+    background: #0077B5;
     color: white;
   }
   
   .footer-button:hover {
-    opacity: 0.8; /* Hover effect */
+    opacity: 0.8;
   }
   
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .highlight-cards {
-    flex-direction: column; /* Stack cards on smaller screens */
-  }
-
-  .card {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-/* Featured Projects Section */
-.featured-projects {
-  margin-top: 4rem;
-}
-
-.project {
-  display: inline-block;
-  width: 250px;
-  margin: 20px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #D9D9D9;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-.projects {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-    gap: 20px; /* Adjust spacing between cards */
-    margin-top: 20px;
-  }
-.project-card {
-    width: 280px; /* Adjust card size as per design */
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .project-card img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px; /* Space between image and text */
-  }
-  
-  .project-card h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-.project p {
-  font-size: 14px;
-  color: #757575;
-}
-@media (max-width: 768px) {
-    .highlight-cards {
-      flex-direction: column; /* Stack cards on smaller screens */
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
     }
   
-    .card {
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .highlight-cards,
+    .projects {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card,
+    .project-card {
       width: 90%;
       margin: 0 auto;
     }
-  
-    .project {
-      width: 90%;
-      margin: 0 auto;
-    }
-  }
-  
+  }  
