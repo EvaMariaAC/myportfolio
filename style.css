@@ -1,74 +1,72 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
-    line-height: 1.6;
-  }
-  
-  /* Header Section */
-  header {
-    background: #89AEEA;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Hero Section */
-  .hero {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
+  line-height: 1.6;
+}
+
+/* Header Section */
+header {
+  background: #89AEEA;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem; /* Adjust padding to match Figma */
     color: #333;
   }
   
   .hero h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Keep existing size */
     font-weight: 700;
   }
   
   .hero p {
     margin: 1rem 0;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Matches readability */
   }
   
+  /* CTA Buttons (from new CSS) */
   .cta-buttons {
     margin-top: 2rem;
   }
   
-  .cta-buttons a {
-    text-decoration: none;
-    margin: 0.5rem;
-    padding: 0.75rem 2rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
   .cta-buttons .btn-primary {
-    background: #EEA575;
-    color: #333;
+    background-color: #EEA575;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 15px 30px;
+    border-radius: 42px;
+    text-decoration: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
   
   .cta-buttons .btn-primary:hover {
@@ -76,17 +74,21 @@
   }
   
   .cta-buttons .btn-secondary {
-    background: #fff;
+    background-color: #F7F7F7;
     border: 2px solid #89AEEA;
-    color: #333;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 15px 30px;
+    border-radius: 42px;
   }
   
   .cta-buttons .btn-secondary:hover {
     background: #d9e9fc;
   }
   
-  /* Highlights Section */
-  .highlights {
+/* Highlights Section */
+.highlights {
     background: #147CAC;
     padding: 3rem 2rem;
     color: white;
@@ -102,7 +104,7 @@
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    flex-wrap: wrap; /* For smaller screens */
+    flex-wrap: wrap;
   }
   
   .card {
@@ -116,45 +118,91 @@
   }
   
   .card h3 {
-    color: #1C50EA;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: #1C50EA;
   }
   
   .card p {
     font-size: 1rem;
     color: #333;
   }
-  
-  .card span {
-    font-weight: bold;
-    color: #1C50EA;
+
+.card span {
+  font-weight: bold;
+  color: #1C50EA;
+}
+
+/* Footer Section */
+footer {
+  background: #D9D9D9;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
   }
-  
-  /* Footer Section */
-  footer {
-    background: #D9D9D9;
-    color: #333;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+
+  .hero p {
+    font-size: 1rem;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
+
+  .highlight-cards {
+    flex-direction: column; /* Stack cards on smaller screens */
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+/* Featured Projects Section */
+.featured-projects {
+  margin-top: 4rem;
+}
+
+.project {
+  display: inline-block;
+  width: 250px;
+  margin: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  width: 100px;
+  margin: 20px auto;
+  display: block;
+}
+
+.project h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.project p {
+  font-size: 14px;
+  color: #757575;
+}
+@media (max-width: 768px) {
     .highlight-cards {
       flex-direction: column; /* Stack cards on smaller screens */
     }
   
     .card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .project {
       width: 90%;
       margin: 0 auto;
     }
