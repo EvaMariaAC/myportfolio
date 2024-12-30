@@ -10,7 +10,10 @@
     color: #333;
     background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
     line-height: 1.6;
+    background-attachment: fixed; /* Ensure it stays static during scroll */
+    background-size: cover;
   }
+  
   
   /* Header Section */
   header {
@@ -70,6 +73,9 @@
   .cta-buttons {
     margin-top: 2rem;
   }
+  .cta-buttons a {
+    text-decoration: none; /* Remove underline */
+}
   
   /* Highlights Section */
   .highlights {
@@ -131,19 +137,20 @@
   
   .projects {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center; /* Center align projects */
+    gap: 20px; /* Add spacing between project cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 2rem 0; /* Add vertical spacing */
   }
   
   .project-card {
-    width: 250px;
+    width: 280px; /* Match design size */
     background: white;
     border-radius: 8px;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     border: 1px solid #D9D9D9;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .project-card img {
@@ -155,12 +162,13 @@
   .project-card h3 {
     font-size: 18px;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   
   .project-card p {
     font-size: 14px;
     color: #757575;
+    line-height: 1.5;
   }
   
   /* Footer Section */
