@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
+    line-height: 1.6;
+  }
+  
+  /* Header Section */
+  header {
+    background: #89AEEA;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #333;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .hero p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .cta-buttons {
+    margin-top: 2rem;
+  }
+  
+  .cta-buttons a {
+    text-decoration: none;
+    margin: 0.5rem;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .cta-buttons .btn-primary {
+    background: #EEA575;
+    color: #333;
+  }
+  
+  .cta-buttons .btn-primary:hover {
+    background: #f5b08a;
+  }
+  
+  .cta-buttons .btn-secondary {
+    background: #fff;
+    border: 2px solid #89AEEA;
+    color: #333;
+  }
+  
+  .cta-buttons .btn-secondary:hover {
+    background: #d9e9fc;
+  }
+  
+  /* Highlights Section */
+  .highlights {
+    background: #147CAC;
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .highlights h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .highlight-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap; /* For smaller screens */
+  }
+  
+  .card {
+    background: #f7f7f7;
+    color: #333;
+    width: 280px;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    color: #1C50EA;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .card span {
+    font-weight: bold;
+    color: #1C50EA;
+  }
+  
+  /* Footer Section */
+  footer {
+    background: #D9D9D9;
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .highlight-cards {
+      flex-direction: column; /* Stack cards on smaller screens */
+    }
+  
+    .card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
