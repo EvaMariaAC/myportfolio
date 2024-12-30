@@ -88,13 +88,7 @@
   .btn-primary:hover {
     background: #f5b08a;
   }
-  
-  .btn-secondary {
-    background-color: #F7F7F7;
-    border: 2px solid #89AEEA;
-    color: black;
-  }
-  
+    
   .btn-secondary:hover {
     background: #d9e9fc;
   }
