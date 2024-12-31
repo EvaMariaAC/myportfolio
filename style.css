@@ -134,10 +134,13 @@
   
   /* Featured Projects Section */
   .featured-projects {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem; /* Consistent padding */
+    text-align: center; /* Center-align content */
     background: linear-gradient(180deg, #147CAC 50%, #89AEEA 100%);
-    text-align: center;
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Ensure padding is included in width */
   }
+  
 
   .featured-projects h2 {
     margin-bottom: 2rem; /* Add space below the title */
@@ -147,29 +150,29 @@
   
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns for the top cards */
-    grid-auto-rows: auto; /* Automatically adjust row height */
-    gap: 2rem; /* Space between grid items */
-    justify-content: center; /* Center the grid horizontally */
-    align-items: start; /* Align items to the top */
-    width: 100%; /* Ensure the grid spans the full width of the container */
-    max-width: 1200px; /* Add a maximum width for better alignment on large screens */
-    margin: 0 auto; /* Center the grid container */
-  }
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 2rem; /* Consistent spacing between items */
+    justify-content: center; /* Center the entire grid horizontally */
+    align-items: start; /* Align rows to the top */
+    max-width: 1200px; /* Constrain the grid to a fixed width */
+    margin: 0 auto; /* Center the grid within the section */
+    padding: 0 2rem; /* Add padding to avoid edge overflow */
+  }  
   
   .project-card {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure the card fits within the grid cell */
-    max-width: 300px; /* Add a maximum width for consistent sizing */
-    text-align: center;
+    width: 100%; /* Allow card to adjust within the grid */
+    max-width: 300px; /* Add a consistent maximum width */
+    min-height: 350px; /* Ensure cards have consistent height */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Evenly distribute content */
+    text-align: center;
   }
+  
   
   .project-card img {
     max-width: 120px; /* Make images slightly larger for better balance */
@@ -251,6 +254,7 @@
           width: 90%; /* Make cards full width */
           margin: 0 auto;
         }
+        
     .highlight-cards,
     .projects {
       flex-direction: column;
@@ -262,4 +266,11 @@
       width: 90%;
       margin: 0 auto;
     }     
+    @media (min-width: 1920px) {
+        .projects-grid {
+          gap: 3rem; /* Slightly increase spacing for larger screens */
+          max-width: 1400px; /* Adjust the grid width */
+        }
+      }
+      
   }  
