@@ -76,6 +76,8 @@
   }
   .cta-buttons a {
     text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure buttons behave like inline-block elements */
+
 }
   
   /* Highlights Section */
@@ -134,15 +136,18 @@
   .featured-projects {
     padding: 4rem;
     background: linear-gradient(180deg, #147CAC 50%, #89AEEA 100%);
-}
+    text-align: center;
+  }
+  
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    grid-template-rows: auto auto; /* Two rows: One for three cards, one for the last card */
+    grid-auto-rows: auto; /* Rows automatically size based on content */
     gap: 2rem; /* Spacing between cards */
-    justify-items: center; /* Centers items horizontally */
-    margin-top: 2rem;
-  }  
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center; /* Centers items vertically */
+  }
+  
   .project-card {
     background: white;
     padding: 1rem;
@@ -169,11 +174,12 @@
     color: #757575;
   }
   
-  /* Center the single card on its row */
+  /* Special Rule for Centering the Last Card */
   .projects-grid > :nth-child(4) {
-    grid-column: 2; /* Centers the last card in the middle column */
+    grid-column: 2 / 3; /* Center the fourth card in the second column */
+    justify-self: center; /* Ensure it is centered within the column */
   }
-  
+
   /* Footer Section */
   footer {
     display: flex;
