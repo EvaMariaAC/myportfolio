@@ -134,7 +134,7 @@
   
   /* Featured Projects Section */
   .featured-projects {
-    padding: 4rem;
+    padding: 4rem 2rem;
     background: linear-gradient(180deg, #147CAC 50%, #89AEEA 100%);
     text-align: center;
   }
@@ -146,43 +146,43 @@
   }  
   
   .projects-grid {
-    display: -ms-inline-grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 2rem; /* Spacing between cards */
-    justify-content: center; /* Center the entire grid horizontally */
-    align-items: start; /* Align all rows to the top */
-  }  
-    .project-card {
-        background: white;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 280px;
-        height: 350px; /* Set a consistent height */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Distribute content evenly */
-        text-align: center;
-      }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between grid items */
+    justify-items: center; /* Horizontally center each grid item */
+  }
+  
+  .project-card {
+    background: white;
+    padding: 1.5rem; /* Slightly increase padding for better spacing */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width within the grid cell */
+    max-width: 300px; /* Limit max width for consistency */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align all content */
+    text-align: center;
+    height: auto; /* Let height adjust to content */
+  }
   
   .project-card img {
-    max-width: 100px;
+    max-width: 120px; /* Make images slightly larger for better balance */
     height: auto;
-    justify-content: center;
     margin-bottom: 1rem;
   }
   
   .project-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Slightly larger heading */
     color: #333;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
   
   .project-card p {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Make text consistent with other sections */
     color: #757575;
+    line-height: 1.5; /* Better readability */
   }
-  
   /* Special Rule for Centering the Last Card */
   .projects-grid > :nth-child(4) {
         grid-column: 2 / 3; /* Place the fourth card in the second column */
