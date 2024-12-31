@@ -150,35 +150,37 @@
   
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 2rem; /* Consistent spacing between items */
-    justify-content: center; /* Center the entire grid horizontally */
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    gap: 2rem; /* Even spacing between cards */
+    justify-content: center; /* Center the entire grid */
     align-items: start; /* Align rows to the top */
-    max-width: 1200px; /* Constrain the grid to a fixed width */
-    margin: 0 auto; /* Center the grid within the section */
-    padding: 0 2rem; /* Add padding to avoid edge overflow */
-  }  
+    max-width: 1200px; /* Constrain grid width */
+    margin: 0 auto; /* Center the grid horizontally */
+    padding: 0 1rem; /* Add horizontal padding */
+    box-sizing: border-box; /* Ensure padding is part of the width */
+}
   
-  .project-card {
+.project-card {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Allow card to adjust within the grid */
-    max-width: 300px; /* Add a consistent maximum width */
-    min-height: 350px; /* Ensure cards have consistent height */
+    max-width: 300px; /* Consistent card width */
+    width: 100%; /* Adjust card width inside the grid */
+    min-height: 350px; /* Ensure uniform card height */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Evenly distribute content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out content evenly */
     text-align: center;
-  }
+    box-sizing: border-box; /* Include padding in width */
+}    
   
-  
-  .project-card img {
-    max-width: 120px; /* Make images slightly larger for better balance */
-    height: auto;
-    margin-bottom: 1rem;
-  }
+.project-card img {
+    max-width: 100%; /* Allow images to scale */
+    max-height: 120px; /* Prevent images from exceeding a fixed height */
+    margin: 0 auto; /* Center images horizontally */
+    display: block; /* Ensure block-level behavior */
+}
   
   .project-card h3 {
     font-size: 1.4rem; /* Slightly larger heading */
@@ -268,9 +270,8 @@
     }     
     @media (min-width: 1920px) {
         .projects-grid {
-          gap: 3rem; /* Slightly increase spacing for larger screens */
-          max-width: 1400px; /* Adjust the grid width */
+            max-width: 1400px; /* Constrain grid width */
+            gap: 2.5rem; /* Slightly increase spacing for larger screens */
         }
-      }
-      
+    }     
   }  
