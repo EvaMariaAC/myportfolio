@@ -138,24 +138,32 @@
     background: linear-gradient(180deg, #147CAC 50%, #89AEEA 100%);
     text-align: center;
   }
+
+  .featured-projects h2 {
+    margin-bottom: 2rem; /* Add space below the title */
+    font-size: 2.5rem; /* Ensure consistency with the Highlights section */
+    color: #333;
+  }  
   
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    grid-auto-rows: auto; /* Rows automatically size based on content */
     gap: 2rem; /* Spacing between cards */
-    justify-content: center; /* Centers the grid horizontally */
-    align-items: center; /* Centers items vertically */
-  }
-  
-  .project-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    text-align: center;
-  }
+    justify-content: center; /* Center the entire grid horizontally */
+    align-items: start; /* Align all rows to the top */
+  }  
+    .project-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 280px;
+        height: 350px; /* Set a consistent height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribute content evenly */
+        text-align: center;
+      }
   
   .project-card img {
     max-width: 100px;
@@ -176,8 +184,11 @@
   
   /* Special Rule for Centering the Last Card */
   .projects-grid > :nth-child(4) {
-    grid-column: 2 / 3; /* Center the fourth card in the second column */
-    justify-self: center; /* Ensure it is centered within the column */
+        grid-column: 2 / 3; /* Place the fourth card in the second column */
+        justify-self: center; /* Center it horizontally */
+        align-self: start; /* Align it with the top of the other rows */
+      }
+      
   }
 
   /* Footer Section */
@@ -227,7 +238,15 @@
     .hero p {
       font-size: 1rem;
     }
-  
+        .projects-grid {
+          grid-template-columns: 1fr; /* Single column on smaller screens */
+          gap: 1.5rem; /* Adjust spacing */
+        }
+      
+        .project-card {
+          width: 90%; /* Make cards full width */
+          margin: 0 auto;
+        }
     .highlight-cards,
     .projects {
       flex-direction: column;
@@ -238,5 +257,5 @@
     .project-card {
       width: 90%;
       margin: 0 auto;
-    }
+    }     
   }  
