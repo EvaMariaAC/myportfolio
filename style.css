@@ -200,6 +200,15 @@
         align-self: start; /* Align it with the top of the other rows */
       }
 
+      .projects-grid {
+        border: 2px dashed red; /* Debugging: Check grid container */
+    }
+    
+    .project-card {
+        border: 2px dashed blue; /* Debugging: Check card alignment */
+    }
+    
+
   /* Footer Section */
   footer {
     display: flex;
