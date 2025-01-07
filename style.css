@@ -150,9 +150,10 @@
   
   .projects-grid {
     display: flex;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
     gap: 2rem; /* Even spacing between cards */
     justify-content: center; /* Center the entire grid */
-    align-items: start; /* Align rows to the top */
+    align-items: stretch; /* Align rows to the top */
     max-width: 1200px; /* Constrain grid width */
     margin: 0 auto; /* Center the grid horizontally */
     padding: 0 1rem; /* Add horizontal padding */
@@ -166,6 +167,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 300px; /* Consistent card width */
     width: 100%; /* Adjust card width inside the grid */
+    flex: 1 1 calc(33.33% - 2rem); /* Flex basis for responsive layout */
     min-height: 350px; /* Ensure uniform card height */
     display: flex;
     flex-direction: column; /* Stack content vertically */
@@ -234,37 +236,30 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .hero h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     .hero p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-        .projects-grid {
-          grid-template-columns: 1fr; /* Single column on smaller screens */
-          gap: 1.5rem; /* Adjust spacing */
-        }
-      
-        .project-card {
-          width: 90%; /* Make cards full width */
-          margin: 0 auto;
-        }
-        
-    .highlight-cards,
-    .projects {
-      flex-direction: column;
-      align-items: center;
+
+    .projects-grid {
+        flex-direction: column; /* Stack cards vertically */
     }
-  
+
+    .project-card {
+        max-width: 90%; /* Ensure cards fit within the container */
+        margin: 0 auto;
+    }
+
+    .highlight-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .card,
     .project-card {
-      width: 90%;
-      margin: 0 auto;
-    }     
-    @media (min-width: 1920px) {
-        .projects-grid {
-            max-width: 1400px; /* Constrain grid width */
-            gap: 2.5rem; /* Slightly increase spacing for larger screens */
-        }
-    }     
-  }  
+        width: 90%;
+        margin: 0 auto;
+    }
+}
