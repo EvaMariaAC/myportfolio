@@ -1,35 +1,209 @@
-body {
-    background: linear-gradient(180deg, #D9D9D9 0%, #8BA7D3 28%, #89AEEA 77%);
-  }
-  
-  .about-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .about-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  
-  .card {
-    background: white;
-    padding: 1.5rem;
-    border: 1px solid #D9D9D9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .timeline {
-    margin: 4rem 0;
-    text-align: center;
-  }
-  
-  .timeline-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-  }
-  
+.hero-image {
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.about-header {
+  text-align: center;
+  padding: 20px;
+}
+.about-header h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+.about-header p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.linkedin-btn img {
+  width: 120px;
+  margin-top: 20px;
+}
+.core-values {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.core-values h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.values-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+.core-values {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.core-values h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.values-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+.timeline {
+  padding: 40px 20px;
+  background-color: #e9f4ff; /* Light blue background for contrast */
+  text-align: center;
+}
+
+.timeline h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.timeline-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-grid:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #89AEEA;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.milestone {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.milestone:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #89AEEA;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.milestone h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.milestone p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.hobbies {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+}
+.hobbies img {
+  max-width: 100%;
+  width: 400px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.hobbies p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Footer Section */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #D9D9D9;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contact-me {
+  background: #EEA575;
+  color: black;
+}
+
+.linkedin {
+  background: #0077B5;
+  color: white;
+}
+
+.footer-button:hover {
+  opacity: 0.8;
+}
