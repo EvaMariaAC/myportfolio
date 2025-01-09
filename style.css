@@ -1,300 +1,69 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
-    line-height: 1.6;
-    background-attachment: fixed; /* Ensure it stays static during scroll */
-    background-size: cover;
-  }
-  
-  
-  /* Header Section */
-  header {
-    background: #89AEEA;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 50px;
-    height: auto;
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .nav {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 1rem;
-  }
-  
-  .nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    padding: 6rem 2rem;
-    color: #333;
-    background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
-}
-  
-  .hero img {
-    display: inline-block;
-    margin: 1rem 0.5rem;
-    width: 250px;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  
-  .hero p {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-  }
-  
-  .cta-buttons {
-    margin-top: 2rem;
-  }
-  .cta-buttons a {
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensure buttons behave like inline-block elements */
-
-}
-  
-  /* Highlights Section */
-  .highlights {
-    background: linear-gradient(180deg, #199BD7 50%, #147CAC 100%);
-    padding: 3rem 2rem;
-    color: white;
-    text-align: center;
-  }
-  
-  .highlights h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .highlight-cards {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background: #f7f7f7;
-    color: #333;
-    width: 280px;
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
-    width: auto;
-    height: 50px;
-    margin-bottom: 1rem;
-  }
-  
-  .card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #1C50EA;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .card span {
-    font-weight: bold;
-    color: #1C50EA;
-  }
-  
-  /* Featured Projects Section */
-  .featured-projects {
-    padding: 4rem 2rem; /* Consistent padding */
-    text-align: center; /* Center-align content */
-    background: linear-gradient(180deg, #147CAC 50%, #89AEEA 100%);
-    max-width: 100%; /* Prevent overflow */
-    box-sizing: border-box; /* Ensure padding is included in width */
-  }
-  
-
-  .featured-projects h2 {
-    margin-bottom: 2rem; /* Add space below the title */
-    font-size: 2.5rem; /* Ensure consistency with the Highlights section */
-    color: #ffffff;
-  }  
-  
-  .projects-grid {
-    display: flex;
-    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-    gap: 2rem; /* Even spacing between cards */
-    justify-content: center; /* Center the entire grid */
-    align-items: stretch; /* Align rows to the top */
-    max-width: 1200px; /* Constrain grid width */
-    margin: 0 auto; /* Center the grid horizontally */
-    padding: 0 1rem; /* Add horizontal padding */
-    box-sizing: border-box; /* Ensure padding is part of the width */
-}
-  
-.project-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Consistent card width */
-    width: 100%; /* Adjust card width inside the grid */
-    flex: 1 1 calc(33.33% - 2rem); /* Flex basis for responsive layout */
-    min-height: 350px; /* Ensure uniform card height */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: space-between; /* Space out content evenly */
-    text-align: center;
-    box-sizing: border-box; /* Include padding in width */
-}    
-  
-.project-card img {
-    max-width: 100%; /* Allow images to scale */
-    max-height: 120px; /* Prevent images from exceeding a fixed height */
-    margin: 0 auto; /* Center images horizontally */
-    display: block; /* Ensure block-level behavior */
-}
-  
-  .project-card h3 {
-    font-size: 1.4rem; /* Slightly larger heading */
-    color: #333;
-    margin-bottom: 0.8rem;
-  }
-  
-  .project-card p {
-    font-size: 1rem; /* Make text consistent with other sections */
-    color: #757575;
-    line-height: 1.5; /* Better readability */
-  }
-  
-  /* Footer Section */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: #D9D9D9;
-  }
-  
-  .footer-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .footer-button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .contact-me {
-    background: #EEA575;
-    color: black;
-  }
-  
-  .linkedin {
-    background: #0077B5;
-    color: white;
-  }
-  
-  .footer-button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .projects-grid {
-        flex-direction: column; /* Stack cards vertically */
-    }
-
-    .project-card {
-        max-width: 90%; /* Ensure cards fit within the container */
-        margin: 0 auto;
-    }
-
-    .highlight-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card,
-    .project-card {
-        width: 90%;
-        margin: 0 auto;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
-  background: linear-gradient(180deg, #D9D9D9 0%, #8BA7D3 28%, #89AEEA 77%);
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
+header {
+  background: #89AEEA;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* About Section */
-.about-header {
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #D9D9D9;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 3rem;
+  text-decoration: none;
 }
 
-.about-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+.footer-button:hover {
+  opacity: 0.8;
 }
 
-.about-header p {
-  font-size: 1.1rem;
-  margin: 1rem 0;
+.contact-me {
+  background: #EEA575;
+  color: black;
 }
 
 .linkedin-btn {
@@ -312,7 +81,132 @@ body {
   background-color: #005a8c;
 }
 
-/* Core Values */
+body.home {
+  background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: #333;
+  background: linear-gradient(180deg, #89AEEA 50%, #199BD7 100%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+}
+
+.cta-buttons a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Highlights Section */
+.highlights {
+  background: linear-gradient(180deg, #199BD7 50%, #147CAC 100%);
+  padding: 3rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.highlights h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.highlight-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f7f7f7;
+  color: #333;
+  width: 280px;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1C50EA;
+}
+
+/* Featured Projects */
+.featured-projects {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #147CAC 50%, #89AEEA 100%);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  flex: 1 1 calc(33.33% - 2rem);
+  min-height: 350px;
+  text-align: center;
+}
+body.about {
+  background: linear-gradient(180deg, #D9D9D9 0%, #8BA7D3 28%, #89AEEA 77%);
+}
+
+/* About Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+/* Core Values Section */
 .core-values {
   text-align: center;
   margin: 4rem 0;
@@ -342,7 +236,6 @@ body {
 
 .card img {
   width: 80px;
-  height: auto;
   margin-bottom: 1rem;
 }
 
@@ -386,21 +279,20 @@ body {
 .hobbies img {
   width: 100%;
   max-width: 400px;
-  margin-bottom: 1rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .about-header h1 {
-    font-size: 2rem;
-  }
-
-  .card, .milestone {
-    max-width: 100%;
-  }
-
-  .values-grid, .timeline-grid {
+  header, footer {
     flex-direction: column;
-    gap: 1rem;
+    text-align: center;
+  }
+
+  .projects-grid, .values-grid, .timeline-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-card, .card, .milestone {
+    max-width: 100%;
   }
 }
