@@ -1,9 +1,22 @@
+.about-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
 .hero-image {
   width: 200px;
+  height: auto;
   border-radius: 50%;
-  margin: 0 auto;
-  display: block;
 }
+
+.about-text {
+  max-width: 500px;
+  text-align: left;
+}
+
 .about-header {
   text-align: center;
   padding: 20px;
@@ -97,34 +110,39 @@
   margin-bottom: 30px;
 }
 
+/* Timeline Container */
 .timeline-grid {
   display: flex;
-  flex-direction: column;
-  gap: 50px;
+  flex-wrap: nowrap; /* Prevent wrapping on desktop */
+  gap: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling */
   position: relative;
-  padding: 20px 0;
+  padding: 20px;
 }
 
+/* Horizontal Line */
 .timeline-grid:before {
   content: '';
   position: absolute;
-  width: 4px;
-  height: 100%;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
   background: #89AEEA;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 0;
+  transform: translateY(-50%);
 }
 
+/* Milestone Styling */
 .milestone {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 200px;
   background: white;
   border-radius: 8px;
   padding: 20px;
-  width: 250px;
   text-align: center;
-  position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
   z-index: 1;
 }
 
@@ -135,12 +153,10 @@
   height: 16px;
   background: #89AEEA;
   border-radius: 50%;
-  top: 0;
-  left: 50%;
+  top: 50%;
+  left: 0;
   transform: translate(-50%, -50%);
-  z-index: 1;
 }
-
 .milestone h4 {
   font-size: 1.2rem;
   color: #333;
@@ -206,4 +222,34 @@ footer {
 
 .footer-button:hover {
   opacity: 0.8;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .timeline-grid {
+    display: flex;
+    flex-wrap: wrap; /* Stack vertically */
+    justify-content: center;
+    overflow-x: visible;
+  }
+
+  .timeline-grid:before {
+    height: auto;
+    width: 4px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .milestone {
+    margin-bottom: 20px;
+    flex: 1 1 100%; /* Full width */
+    text-align: left;
+  }
+
+  .milestone:before {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
 }
